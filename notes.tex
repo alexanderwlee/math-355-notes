@@ -1,0 +1,71 @@
+\documentclass{amsart}
+
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{axiom}{Axiom}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\abs}[1]{|#1|}
+
+\title{MATH 355: Notes}
+\author{Alexander Lee}
+
+\begin{document}
+
+\maketitle
+
+\section*{The Real Numbers}
+
+\subsection*{Some Preliminaries}
+
+\begin{theorem}
+  Two real numbers $a$ and $b$ are equal if and only if for every real number
+  $\epsilon > 0$ it follows that $\abs{a-b} < \epsilon$.
+\end{theorem}
+
+\subsection*{The Axiom of Completeness}
+
+\begin{axiom}[Axiom of Completeness]
+  Every nonempty set of real numbers that is bounded above has a least upper
+  bound.
+\end{axiom}
+
+\begin{definition}
+  A set $A \subseteq R$ is \emph{bounded above} if there exists a number $b \in
+  \R$ such that $a \le b$ for all $a \in A$. The number $b$ is called an
+  \emph{upper bound} for $A$.
+
+  Similarly, the set $A$ is \emph{bounded below} if there exists a \emph{lower
+  bound} $l \in R$ satisfying $l \le a$ for every $a \in A$.
+\end{definition}
+
+\begin{definition}
+  A real number $s$ is the \emph{least upper bound} for a set $A \subseteq \R$
+  if it meets the following two criteria:
+  \begin{enumerate}
+    \item $s$ is an upper bound for $A$;
+    \item if $b$ is any upper bound for $A$, then $s \le b$.
+  \end{enumerate}
+  The least upper bound is also frequently called the \emph{supremum} of the set
+  $A$. We write $s = \sup{A}$ for the least upper bound.
+
+  The \emph{greatest lower bound} or \emph{infimum} for $A$ is defined in a
+  similar way and is denoted by $\inf{A}$.
+\end{definition}
+
+\begin{definition}
+  A real number $a_0$ is a \emph{maximum} of the set $A$ if $a_0$ is an element
+  of $A$ and $a_0 \ge a$ for all $a \in A$. Similarly, a number $a_1$ is a
+  \emph{minimum} of $A$ if $a_1 \in A$ and $a_1 \le a$ for every $a \in A$.
+\end{definition}
+
+\begin{lemma}
+  Assume $s \in \R$ is an upper bound for a set $A \subseteq R$. Then, $s =
+  \sup{A}$ if and only if, for every choice of $\epsilon > 0$, there exists an
+  element $a \in A$ satisfying $s - \epsilon < a$.
+\end{lemma}
+
+\end{document}
