@@ -1,5 +1,7 @@
 \documentclass{amsart}
 
+\usepackage{enumitem}
+
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{lemma}{Lemma}
 \newtheorem*{axiom}{Axiom}
@@ -7,8 +9,11 @@
 \theoremstyle{definition}
 \newtheorem*{definition}{Definition}
 
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\Q}{\mathbf{Q}}
 \newcommand{\R}{\mathbf{R}}
 \newcommand{\abs}[1]{|#1|}
+\newcommand{\st}{\mathrel{:}}
 
 \title{MATH 355: Notes}
 \author{Alexander Lee}
@@ -45,7 +50,7 @@
 \begin{definition}
   A real number $s$ is the \emph{least upper bound} for a set $A \subseteq \R$
   if it meets the following two criteria:
-  \begin{enumerate}
+  \begin{enumerate}[label={(\roman*)}]
     \item $s$ is an upper bound for $A$;
     \item if $b$ is any upper bound for $A$, then $s \le b$.
   \end{enumerate}
@@ -67,5 +72,30 @@
   \sup{A}$ if and only if, for every choice of $\epsilon > 0$, there exists an
   element $a \in A$ satisfying $s - \epsilon < a$.
 \end{lemma}
+
+\begin{theorem}[Nested Interval Property]
+  For each $n \in \N$, assume we are given a closed interval $I_n = [a_n, b_n] =
+  \{x \in \R \st a_n \le x \le b_n\}$. Assume also that each $I_n$ contains
+  $I_{n+1}$. Then, the resulting nested sequence of closed intervals
+  \[
+    I_1 \supseteq I_2 \supseteq I_3 \supseteq I_4 \supseteq \cdots
+  \]
+  has a nonempty intersection; that is, $\bigcap_{n=1}^{\infty} I_n \neq
+  \emptyset$.
+\end{theorem}
+
+\begin{theorem}[Archimedean Property]
+  \begin{enumerate}[label={(\roman*)}]
+    \item Given any number $x \in \R$, there exists an $n \in \N$ satisfying $n
+      > x$.
+    \item Given any real number $y > 0$, there exists an $n \in \N$ satisfying
+      $1/n < y$.
+  \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Density of $\Q$ in $\R$]
+  For every two real numbers $a$ and $b$ with $a < b$, there exists a rational
+  number $r$ satisfying $a < r < b$.
+\end{theorem}
 
 \end{document}
