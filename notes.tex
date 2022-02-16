@@ -61,11 +61,32 @@
   similar way and is denoted by $\inf{A}$.
 \end{definition}
 
+\begin{theorem}
+  Let $A \subseteq \R$ be bounded above and below. Then, the $\sup{A}$ and
+  $\inf{A}$ are unique.
+\end{theorem}
+
 \begin{definition}
   A real number $a_0$ is a \emph{maximum} of the set $A$ if $a_0$ is an element
   of $A$ and $a_0 \ge a$ for all $a \in A$. Similarly, a number $a_1$ is a
   \emph{minimum} of $A$ if $a_1 \in A$ and $a_1 \le a$ for every $a \in A$.
 \end{definition}
+
+\begin{theorem}
+  Let $A \subseteq \R$ be nonempty and bounded above.
+  \begin{enumerate}[label={(\roman*)}]
+    \item Let $c \in \R$ and define the set $c + A$ by
+      \[
+        c + A = \{c + a \st a \in A\}.
+      \]
+      Then $\sup(c + A) = c + \sup{A}$.
+    \item Let $c \in \R$ with $c > 0$ and define the set $cA$ by
+      \[
+        cA = \{ca \st a \in A\}.
+      \]
+      Then $\sup(cA) = c \sup{A}$.
+  \end{enumerate}
+\end{theorem}
 
 \begin{lemma}
   Assume $s \in \R$ is an upper bound for a set $A \subseteq R$. Then, $s =
@@ -94,6 +115,11 @@
       $1/n < y$.
   \end{enumerate}
 \end{theorem}
+
+\begin{definition}
+  A set $X$ is \emph{dense in $\R$} if for any $a, b \in \R$ with $a < b$,
+  $\exists x \in X$ with $a < x < b$.
+\end{definition}
 
 \begin{theorem}[Density of $\Q$ in $\R$]
   For every two real numbers $a$ and $b$ with $a < b$, there exists a rational
