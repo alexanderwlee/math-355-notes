@@ -201,4 +201,53 @@
   that is onto.
 \end{theorem}
 
+\section*{2 Sequences and Series}
+
+\subsection*{2.2 The Limit of a Sequence}
+
+\begin{definition}
+  A \emph{sequence} is a function whose domain is $\N$.
+\end{definition}
+
+\begin{definition}[Convergence of a Sequence]
+  A sequence $(a_n)$ \emph{converges} to a real number $a$ if, for every
+  positive number $\epsilon$, there exists and $N \in \N$ such that whenever $n
+  \ge N$, it follows that $\abs{a_n - a} < \epsilon$.
+\end{definition}
+
+\begin{definition}
+  Given a real number $a \in \R$ and a positive number $\epsilon > 0$, the set
+  \[
+    V_\epsilon(a) = \{x \in \R \st \abs{x - a} < \epsilon\} = (a - \epsilon, a +
+    \epsilon)
+  \]
+  is called the \emph{$\epsilon$-neighborhood of $a$}.
+\end{definition}
+
+\begin{definition}[Convergence of a Sequence: Topological Version]
+  A sequence $(a_n)$ converges to $a$ if, given any $\epsilon$-neighborhood
+  $V_\epsilon(a)$ of $a$, there exists a point in the sequence after which all
+  of the terms are in $V_\epsilon(a)$. In other words, every
+  $\epsilon$-neighborhood contains all but a finite number of terms of $(a_n)$.
+\end{definition}
+
+\begin{theorem}[Uniqueness of Limits]
+  The limit of a sequence, when it exists, must be unique.
+\end{theorem}
+
+\begin{definition}
+  A sequence that does not converge is said to \emph{diverge}.
+\end{definition}
+
+\subsection*{2.3 The Algebraic and Order Limit Theorems}
+
+\begin{definition}
+  A sequence $(x_n)$ is \emph{bounded} if there exists a number $M > 0$ such
+  that $\abs{x_n} \le M$ for all $n \in \N$.
+\end{definition}
+
+\begin{theorem}
+  Every convergent sequence is bounded.
+\end{theorem}
+
 \end{document}
