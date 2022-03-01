@@ -1,4 +1,4 @@
-\documentclass{amsart}
+\documentclass[11pt]{amsart}
 
 \usepackage{enumitem}
 
@@ -248,6 +248,40 @@
 
 \begin{theorem}
   Every convergent sequence is bounded.
+\end{theorem}
+
+\begin{theorem}[Algebraic Limit Theorem]
+  Let $\lim{a_n} = a$ and $\lim{b_n} = b$. Then,
+  \begin{enumerate}[label={(\roman*)}]
+    \item $\lim(ca_n) = ca$, for all $c \in \R$;
+    \item $\lim(a_n + b_n) = a + b$;
+    \item $\lim(a_n b_n) = ab$;
+    \item $\lim(a_n / b_n) = a / b$, provided $b \neq 0$.
+  \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Order Limit Theorem]
+  Assume $\lim{a_n} = a$ and $\lim{b_n} = b$.
+  \begin{enumerate}[label={(\roman*)}]
+    \item If $a_n \ge 0$ for all $n \in \N$, then $a \ge 0$.
+    \item If $a_n \le b_n$ for all $n \in \N$, then $a \le b$.
+    \item If there exists $c \in \R$ for which $c \le b_n$ for all $n \in \N$,
+      then $c \le b$. Similarly, if $a_n \le c$ for all $n \in \N$, then $a \le
+      c$.
+  \end{enumerate}
+\end{theorem}
+
+\subsection*{2.4 The Monotone Convergence Theorem and a First Look at Infinite
+Series}
+
+\begin{definition}
+  A sequence $(a_n)$ is \emph{increasing} if $a_n \le a_{n+1}$ for all $n \in
+  \N$ and \emph{decreasing} if $a_n \ge a_{n+1}$ for all $n \in \N$. A sequence
+  is \emph{monotone} if it is either increasing or decreasing.
+\end{definition}
+
+\begin{theorem}[Monotone Convergence Theorem]
+  If a sequence is monotone and bounded, then it converges.
 \end{theorem}
 
 \end{document}
