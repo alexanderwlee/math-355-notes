@@ -1,4 +1,4 @@
-\documentclass[11pt]{amsart}
+\documentclass{amsart}
 
 \usepackage{enumitem}
 
@@ -298,5 +298,15 @@ Series}
   the sequence $(s_m)$ converges to $B$. In this case, we write
   $\sum_{n=1}^{\infty} b_n = B$.
 \end{definition}
+
+\begin{theorem}[Cauchy Condensation Test]
+  Suppose $(b_n)$ is decreasing and satisfies $b_n \ge 0$ for all $n \in \N$.
+  Then, the series $\sum_{n=1}^{\infty} b_n$ converges if and only if the series
+  \[
+    \sum_{n=0}^{\infty} 2^n b_{2^n} = b_1 + 2 b_2 + 4 b_4 + 8 b_8 + 16 b_{16} +
+    \cdots
+  \]
+  converges.
+\end{theorem}
 
 \end{document}
