@@ -4,6 +4,7 @@
 
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{lemma}{Lemma}
+\newtheorem*{corollary}{Corollary}
 \newtheorem*{axiom}{Axiom}
 
 \theoremstyle{definition}
@@ -325,6 +326,12 @@ Series}
   Subsequences of a convergent sequence converge to the same limit as the
   original sequence.
 \end{theorem}
+
+\begin{corollary}[Divergence Criterion]
+  Suppose that $(a_n)$ is a sequence and $(a_{n_k})$ is a subsequence that
+  diverges, then $(a_n)$ diverges. If $(a^1_{n_k})$ and $(a^2_{n_k})$ converge
+  to $a^1$ and $a^2$ with $a^1 \neq a^2$, then $(a_n)$ diverges.
+\end{corollary}
 
 \begin{theorem}[Bolzano-Weierstrass Theorem]
   Every bounded sequence contains a convergent subsequence.
