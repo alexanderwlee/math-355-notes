@@ -376,8 +376,50 @@ Series}
   \]
 \end{theorem}
 
-\begin{theorem}
+\begin{theorem}[Divergence Test]
   If the series $\sum_{k=1}^\infty a_k$ converges, then $(a_k) \rightarrow 0$.
+  Equivalently, if $(a_k) \not\rightarrow 0$, then $\sum_{k=1}^\infty a_k$
+  diverges.
 \end{theorem}
+
+\begin{theorem}[Comparison Test]
+  Assume $(a_k)$ and $(b_k)$ are sequences satisfying $0 \le a_k \le b_k$ for
+  all $k \in \N$.
+  \begin{enumerate}[label={(\roman*)}]
+    \item If $\sum_{k=1}^\infty b_k$ converges, then $\sum_{k=1}^\infty a_k$
+      converges.
+    \item If $\sum_{k=1}^\infty a_k$ diverges, then $\sum_{k=1}^\infty b_k$
+      diverges.
+  \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Squeeze Theorem]
+  Suppose $a_n \le b_n \le c_n$ for all $n \in \N$, and if $\lim a_n = \lim c_n
+  = l$, then $\lim b_n = l$ as well.
+\end{theorem}
+
+\begin{definition}[Geometric Series]
+  A series is called \emph{geometric} if it is of the form
+  \[
+    \sum_{k=0}^\infty ar^k = a + ar + ar^2 + ar^3 + \cdots.
+  \]
+\end{definition}
+
+\begin{theorem}
+  $\sum_{k=0}^\infty ar^k = \frac{a}{1 - r}$ if and only if $\abs{r} < 1$.
+\end{theorem}
+
+\begin{theorem}[Absolute Convergence Test]
+  If the series $\sum_{n=1}^\infty \abs{a_n}$ converges, then $\sum_{n=1}^\infty
+  a_n$ converges as well.
+\end{theorem}
+
+\begin{definition}
+  If $\sum_{n=1}^\infty \abs{a_n}$ converges, then we say that the original
+  series $\sum_{n=1}^\infty a_n$ \emph{converges absolutely}. If, on the other
+  hand, the series $\sum_{n=1}^\infty a_n$ converges but the series of absolute
+  values $\sum_{n=1}^\infty \abs{a_n}$ does not converge, then we say that the
+  original series $\sum_{n=1}^\infty a_n$ \emph{converges conditionally}.
+\end{definition}
 
 \end{document}
