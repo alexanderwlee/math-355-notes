@@ -435,4 +435,41 @@ Series}
   original series $\sum_{n=1}^\infty a_n$ \emph{converges conditionally}.
 \end{definition}
 
+\section*{3 Basic Topology of $\R$}
+
+\subsection*{3.2 Open and Closed Sets}
+
+\begin{definition}
+  A set $O \subseteq \R$ is \emph{open} if for all points $a \in O$ there exists
+  an $\epsilon$-neighborhood $V_\epsilon(a) \subseteq O$.
+\end{definition}
+
+\begin{theorem}
+  \begin{enumerate}[label={(\roman*)}]
+    \item The union of an arbitrary collection of open sets is open.
+    \item The intersection of a finite collection of open sets is open.
+  \end{enumerate}
+\end{theorem}
+
+\begin{definition}
+  A point $x$ is a \emph{limit point} of a set $A$ if every
+  $\epsilon$-neighborhood $V_\epsilon(x)$ of $x$ intersects the set $A$ at some
+  point other than $x$.
+\end{definition}
+
+\begin{theorem}
+  A point $x$ is a limit point of a set $A$ if and only if $x = \lim a_n$ for
+  some sequence $(a_n)$ contained in $A$ satisfying $a_n \neq x$ for all $n \in
+  \N$.
+\end{theorem}
+
+\begin{definition}
+  A point $a \in A$ is an \emph{isolated point of $A$} if it is not a limit
+  point of $A$.
+\end{definition}
+
+\begin{definition}
+  A set $F \subseteq \R$ is \emph{closed} if it contains limit points.
+\end{definition}
+
 \end{document}
