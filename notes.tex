@@ -500,4 +500,48 @@ Series}
   \end{enumerate}
 \end{theorem}
 
+\subsection*{3.3 Compact Sets}
+
+\begin{definition}[Compactness]
+  A set $K \subseteq \R$ is \emph{compact} if every sequence in $K$ has a
+  subsequence that converges to a limit that is also in $K$.
+\end{definition}
+
+\begin{definition}
+  A set $A \subseteq \R$ is \emph{bounded} if there exists $M > 0$ such that
+  $\abs{a} \le M$ for all $a \in A$.
+\end{definition}
+
+\begin{theorem}[Characterization of Compactness in $\R$]
+  A set $K \subseteq \R$ is compact if and only if it is closed and bounded.
+\end{theorem}
+
+\begin{theorem}[Nested Compact Set Property]
+  If
+  \[
+    K_1 \supseteq K_2 \supseteq K_3 \supseteq K_4 \supseteq \cdots
+  \]
+  is a nested sequence of nonempty compact sets, then the intersection
+  $\cap_{n=1}^\infty K_n$ is not empty.
+\end{theorem}
+
+\begin{definition}
+  Let $A \subseteq \R$. An \emph{open cover} for $A$ is a (possibly infinite)
+  collection of open sets $\{O_\lambda \st \lambda \in \Lambda\}$ whose union
+  contains the set $A$; that is, $A \subseteq \cup_{\lambda \in \Lambda}
+  O_\lambda$. Given an open cover for $A$, a \emph{finite subcover} is a finite
+  subcollection of open sets from the original open cover whose union still
+  manages to completely contain $A$.
+\end{definition}
+
+\begin{theorem}[Heine-Borel Theorem]
+  Let $K$ be a subset of $\R$. All of the following statements are equivalent in
+  the sense that any one of them implies the two others:
+  \begin{enumerate}[label={(\roman*)}]
+    \item $K$ is compact.
+    \item $K$ is closed and bounded.
+    \item Every open cover for $K$ has a finite subcover.
+  \end{enumerate}
+\end{theorem}
+
 \end{document}
