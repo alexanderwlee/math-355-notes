@@ -544,4 +544,31 @@ Series}
   \end{enumerate}
 \end{theorem}
 
+\subsection*{4.2 Functional Limits}
+
+\begin{definition}[Functional Limit]
+  Let $f : A \to \R$, and let $c$ be a limit point of the domain $A$. We say
+  that $\lim_{x \to c} f(x) = L$ provided that, for all $\epsilon > 0$, there
+  exists a $\delta > 0$ such that whenever $0 < \abs{x - c} < \delta$ (and $x
+  \in A$) it follows that $\abs{f(x) - L} < \epsilon$.
+\end{definition}
+
+\begin{definition}[Functional Limit: Topological Version]
+  Let $c$ be a limit point of the domain of $f : A \to \R$. We say $\lim_{x \to
+  c} f(x) = L$ provided that, for every $\epsilon$-neighborhood $V_\epsilon(L)$
+  of $L$, there exists a $\delta$-neighborhood $V_\delta(c)$ around $c$ with
+  the property that for all $x \in V_\delta(c)$ different from $c$ (with $x \in
+  A$) it follows that $f(x) \in V_\epsilon(L)$.
+\end{definition}
+
+\begin{theorem}[Sequential Criterion for Functional Limits]
+  Given a function $f : A \to \R$ and a limit point $c$ of $A$, the following
+  two statements are equivalent:
+  \begin{enumerate}[label={(\roman*)}]
+    \item $\lim_{x \to c} f(x) = L$.
+    \item For all sequences $(x_n) \subseteq A$ satisfying $x_n \neq c$ and
+      $(x_n) \to c$, it follows that $f(x_n) \to L$.
+  \end{enumerate}
+\end{theorem}
+
 \end{document}
