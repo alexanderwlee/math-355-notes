@@ -571,4 +571,27 @@ Series}
   \end{enumerate}
 \end{theorem}
 
+\begin{corollary}[Algebraic Limit Theorem for Functional Limits]
+  Let $f$ and $g$ be functions defined on a domain $A \subseteq \R$, and assume
+  $\lim_{x \to c} f(x) = L$ and $\lim_{x \to c} g(x) = M$ for some limit point
+  $c$ of $A$. Then,
+  \begin{enumerate}[label={(\roman*)}]
+    \item $\lim_{x \to c} k f(x) = k L$ for all $k \in \R$,
+    \item $\lim_{x \to c} [f(x) + g(x)] = L + M$,
+    \item $\lim_{x \to c} [f(x) g(x)] = L M$, and
+    \item $\lim_{x \to c} f(x) / g(x) = L / M$, provided $M \neq 0$.
+  \end{enumerate}
+\end{corollary}
+
+\begin{corollary}[Divergence Criterion for Functional Limits]
+  Let $f$ be a function defined on $A$, and let $c$ be a limit point of $A$. If
+  there exists two sequences $(x_n)$ and $(y_n)$ in $A$ with $x_n \neq c$ and
+  $y_n \neq c$ and
+  \[
+    \lim x_n = \lim y_n = c \quad \text{but} \quad \lim f(x_n) \neq \lim f(y_n),
+  \]
+  then we can conclude that the functional limit $\lim_{x \to c} f(x)$ does not
+  exist.
+\end{corollary}
+
 \end{document}
