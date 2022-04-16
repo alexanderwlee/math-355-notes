@@ -544,6 +544,8 @@ Series}
   \end{enumerate}
 \end{theorem}
 
+\section*{4 Functional Limits and Continuity}
+
 \subsection*{4.2 Functional Limits}
 
 \begin{definition}[Functional Limit]
@@ -593,5 +595,68 @@ Series}
   then we can conclude that the functional limit $\lim_{x \to c} f(x)$ does not
   exist.
 \end{corollary}
+
+\subsection*{4.3 Continuous Functions}
+
+\begin{definition}[Continuity]
+  A function $f : A \to \R$ is \emph{continuous at a point} $c \in A$ if, for
+  all $\epsilon > 0$, there exists a $\delta > 0$ such that whenever $\abs{x -
+  c} < \delta$ (and $x \in A$) it follows that $\abs{f(x) - f(c)} < \epsilon$.
+
+  If $f$ is continuous at every point in the domain $A$, then we say that $f$ is
+  \emph{continuous on $A$}.
+\end{definition}
+
+\begin{theorem}[Characterizations of Continuity]
+  Let $f : A \to \R$, and let $c \in A$. The function $f$ is continuous at $c$
+  if and only if any one of the following three conditions is met:
+  \begin{enumerate}[label={(\roman*)}]
+    \item For all $\epsilon > 0$, there exists a $\delta > 0$ such that $\abs{x
+      - c} < \delta$ (and $x \in A$) implies $\abs{f(x) - f(x)} < \epsilon$;
+    \item For all $V_\epsilon(f(c))$, there exists a $V_\delta(c)$ with the
+      property that $x \in V_\delta(c)$ (and $x \in A$) implies $f(x) \in
+      V_\epsilon(f(c))$;
+    \item For all $(x_n) \to c$ (with $x_n \in A$), it follows that $f(x_n) \to
+      f(c)$.
+    \item If $c$ is a limit point of $A$, then the above conditions are
+      equivalent to $\lim_{x \to c} f(x) = f(c)$.
+  \end{enumerate}
+\end{theorem}
+
+\begin{corollary}[Criterion for Discontinuity]
+  Let $f : A \to \R$, and let $c \in A$ be a limit point of $A$. If there exists
+  a sequence $(x_n) \subseteq A$ where $(x_n) \to c$ but such that $f(x_n)$ does
+  not converge to $f(c)$, we may conclude that $f$ is not continuous at $c$.
+\end{corollary}
+
+\begin{theorem}[Algebraic Continuity Theorem]
+  Assume $f : A \to \R$ and $g : A \to \R$ are continuous at point $c \in A$.
+  Then,
+  \begin{enumerate}[label={(\roman*)}]
+    \item $k f(x)$ is continuous at $c$ for all $k \in \R$;
+    \item $f(x) + g(x)$ is continuous at $c$;
+    \item $f(x) g(x)$ is continuous at $c$; and
+    \item $f(x) / g(x)$ is continuous at $c$, provided the quotient is defined.
+  \end{enumerate}
+\end{theorem}
+
+\subsection*{4.4 Continuous Functions on Compact Sets}
+
+\begin{theorem}[Preservation of Compact Sets]
+  Let $f : A \to \R$ be continuous on $A$. If $K \subseteq A$ is compact, then
+  $f(K)$ is compact as well.
+\end{theorem}
+
+\begin{theorem}[Extreme Value Theorem]
+  If $f : K \to \R$ is continuous on a compact set $K \subseteq \R$, then $f$
+  attains a maximum and minimum value. In other words, there exists $x_0, x_1
+  \in K$ such that $f(x_0) \le f(x) \le f(x_1)$ for all $x \in K$.
+\end{theorem}
+
+\begin{definition}[Uniform Continuity]
+  A function $f : A \to \R$ is \emph{uniformly continuous on $A$} if for every
+  $\epsilon > 0$ there exists a $\delta > 0$ such that for all $x, y \in A$,
+  $\abs{x - y} < \delta$ implies $f(x) - f(y) < \epsilon$.
+\end{definition}
 
 \end{document}
