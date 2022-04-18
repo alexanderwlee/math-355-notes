@@ -659,4 +659,19 @@ Series}
   $\abs{x - y} < \delta$ implies $f(x) - f(y) < \epsilon$.
 \end{definition}
 
+\begin{theorem}[Sequential Criterion for Absence of Uniform Continuity]
+  A function $f : A \to \R$ fails to be uniformly continuous on $A$ if and only
+  if there exists a particular $\epsilon_0 > 0$ and two sequences $(x_n)$ and
+  $(y_n)$ in $A$ satisfying
+  \[
+    \abs{x_n - y_n} \to 0 \quad \text{but} \quad \abs{f(x_n) - f(y_n)} \ge
+    \epsilon_0.
+  \]
+\end{theorem}
+
+\begin{theorem}[Uniform Continuity on Compact Sets]
+  A function that is continuous on a compact set $K$ is uniformly continuous on
+  $K$.
+\end{theorem}
+
 \end{document}
