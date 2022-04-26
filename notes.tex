@@ -674,4 +674,82 @@ Series}
   $K$.
 \end{theorem}
 
+\subsection*{4.5 The Intermediate Value Theorem}
+
+\begin{theorem}[Intermediate Value Theorem]
+  Let $f : [a, b] \to \R$ be continuous. If $L$ is a real number satisfying
+  $f(a) < L < f(b)$ or $f(a) > L > f(b)$, then there exists a point $c \in (a,
+  b)$ where $f(c) = L$.
+\end{theorem}
+
+\subsection*{5.2 Derivatives and the Intermediate Value Property}
+
+\begin{definition}[Differentiability]
+  Let $g : A \to \R$ be a function defined on an interval $A$. Given $c \in A$,
+  the \emph{derivative of $g$ at $c$} is defined by
+  \[
+    g'(c) = \lim_{x \to c} \frac{g(x) - g(c)}{x - c},
+  \]
+  provided this limit exists. In this case we say \emph{$g$ is differentiable at
+  $c$}. If $g'$ exists for all points $c \in A$, we say that \emph{$g$ is
+  differentiable on $A$}.
+\end{definition}
+
+\begin{theorem}
+  If $g : A \to \R$ is differentiable at point $c \in A$, then $g$ is continuous
+  at $c$ at well.
+\end{theorem}
+
+\begin{theorem}[Algebraic Differentiability Theorem]
+  Let $f$ and $g$ be functions defined on an interval $A$, and assume both are
+  differentiable at some point $c \in A$. Then,
+  \begin{enumerate}[label={(\roman*)}]
+    \item $(f + g)'(c) = f'(c) + g'(c)$,
+    \item $(kf)'(c) = k f'(c)$, for all $k \in \R$,
+    \item $(fg)'(c) = f'(c) g(c) + f(c) g'(c)$, and
+    \item $(f/g)'(c) = \frac{g(c) f'(c) - f(c) g'(c)}{{[g(c)]}^2}$, provided
+      that $g(c) \neq 0$.
+  \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Chain Rule]
+  Let $f : A \to \R$ and $g : B \to \R$ satisfy $f(A) \subseteq B$ so that the
+  composition $g \circ f$ is defined. If $f$ is differentiable at $c \in A$ and
+  if $g$ is differentiable at $f(c) \in B$, then $g \circ f$ is differentiable
+  at $c$ with $(g \circ f)'(c) = g'(f(c)) \cdot f'(c)$.
+\end{theorem}
+
+\begin{theorem}[Interior Extremum Theorem]
+  Let $f$ be differentiable on an open interval $(a, b)$. If $f$ attains a
+  maximum value at some point $c \in (a, b)$ (i.e., $f(c) \ge f(x)$ for all $x
+  \in (a, b)$), then $f'(c) = 0$. The same is true if $f(c)$ is a minimum value.
+\end{theorem}
+
+\subsection*{5.3 The Mean Value Theorems}
+
+\begin{theorem}[Rolle's Theorem]
+  Let $f : [a, b] \to \R$ be continuous on $[a, b]$ and differentiable on $(a,
+  b)$. If $f(a) = f(b)$, then there exists a point $c \in (a, b)$ where $f'(c) =
+  0$.
+\end{theorem}
+
+\begin{theorem}[Mean Value Theorem]
+  If $f : [a, b] \to \R$ is continuous on $[a, b]$ and differentiable on $(a,
+  b)$, then there exists a point $c \in (a, b)$ where
+  \[
+    f'(c) = \frac{f(b) - f(a)}{b - a}.
+  \]
+\end{theorem}
+
+\begin{corollary}
+  If $g : A \to \R$ is differentiable on an interval $A$ and satisfies $g'(x) =
+  0$ for all $x \in A$, then $g(x) = k$ for some constant $k \in \R$.
+\end{corollary}
+
+\begin{corollary}
+  If $f$ and $g$ are differentiable functions on an interval $A$ and satisfy
+  $f'(x) = g'(x)$ for all $x \in A$, then $f(x) = g(x) + k$ for some constant $k
+  \in \R$.
+\end{corollary}
+
 \end{document}
