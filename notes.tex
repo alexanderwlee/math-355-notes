@@ -682,6 +682,8 @@ Series}
   b)$ where $f(c) = L$.
 \end{theorem}
 
+\section*{5 The Derivative}
+
 \subsection*{5.2 Derivatives and the Intermediate Value Property}
 
 \begin{definition}[Differentiability]
@@ -751,5 +753,35 @@ Series}
   $f'(x) = g'(x)$ for all $x \in A$, then $f(x) = g(x) + k$ for some constant $k
   \in \R$.
 \end{corollary}
+
+\section*{6 Sequences and Series of Functions}
+
+\subsection*{6.2 Uniform Convergence of a Sequence of Functions}
+
+\begin{definition}[Pointwise Convergence]
+  For each $n \in \N$, let $f_n$ be a function defined on a set $A \subseteq
+  \R$. The sequence $(f_n)$ of functions \emph{converges pointwise on $A$} to a
+  function $f$ if, for all $x \in A$, the sequence of real numbers $f_n(x)$
+  converges to $f(x)$.
+
+  In this case, we write $f_n \to f$, $\lim f_n = f$, or $\lim_{n \to \infty}
+  f_n(x) = f(x)$. This last expression is helpful if there is any confusion as
+  to whether $x$ or $n$ is the limiting variable.
+\end{definition}
+
+\begin{definition}[Pointwise Convergence]
+  Let $(f_n)$ be a sequence of functions defined on a set $A \subseteq \R$.
+  Then, $(f_n)$ \emph{converges pointwise on $A$} to a limit $f$ defined on $A$
+  if, for every $\epsilon > 0$ and $x \in A$, there exists an $N \in \N$
+  (perhaps dependent on $x$) such that $\abs{f_n(x) - f(x)} < \epsilon$ whenever
+  $n \ge N$.
+\end{definition}
+
+\begin{definition}[Uniform Convergence]
+  Let $(f_n)$ be a sequence of functions defined on a set $A \subseteq \R$.
+  Then, $(f_n)$ \emph{converges uniformly on $A$} to a limit function $f$
+  defined on $A$ if, for every $\epsilon > 0$, there exists an $N \in \N$ such
+  that $f_n(x) - f(x) < \epsilon$ whenever $n \ge N$ and $x \in A$.
+\end{definition}
 
 \end{document}
