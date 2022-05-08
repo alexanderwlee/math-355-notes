@@ -826,4 +826,36 @@ Series}
   involved.
 \end{definition}
 
+\begin{theorem}[Term-by-term Continuity Theorem]
+  Let $f_n$ be continuous functions defined on a set $A \subseteq \R$, and
+  assume $\sum_{n=1}^\infty f_n$ converges uniformly on $A$ to a function $f$.
+  Then, $f$ is continuous on $A$.
+\end{theorem}
+
+\begin{theorem}[Term-by-term Differentiability Theorem]
+  Let $f_n$ be differentiable functions defined on an interval $A$, and assume
+  $\sum_{n=1}^\infty f_n'(x)$ converges uniformly to a limit $g(x)$ on $A$. If
+  $\sum_{n=1}^\infty f_n(x)$ converges pointwise to $f(x)$, then $f(x)$ is
+  differentiable and $f'(x) = g(x)$ on $A$.
+\end{theorem}
+
+\begin{theorem}[Cauchy Criterion for Uniform Convergence of Series]
+  A series $\sum_{n=1}^\infty f_n$ converges uniformly on $A \subseteq \R$ if
+  and only if for every $\epsilon > 0$ there exists an $N \in \N$ such that
+  \[
+    \abs{f_{m+1}(x) + f_{m+2}(x) + f_{m+3}(x) + \cdots + f_n(x)} < \epsilon
+  \]
+  whenever $n > m \ge N$ and $x \in A$.
+\end{theorem}
+
+\begin{corollary}[Weierstrass M-Test]
+  For each $n \in \N$, let $f_n$ be a function defined on a set $A \subseteq
+  \R$, and let $M_n > 0$ be a real number satisfying
+  \[
+    \abs{f_n(x)} \ge M_n
+  \]
+  for all $x \in A$. If $\sum_{n=1}^\infty M_n$ converges, then
+  $\sum_{n=1}^\infty f_n$ converges uniformly on $A$.
+\end{corollary}
+
 \end{document}
