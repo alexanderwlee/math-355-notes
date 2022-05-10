@@ -866,4 +866,34 @@ Series}
   \abs{x_0}$.
 \end{theorem}
 
+\begin{theorem}
+  If a power series $\sum_{n=0}^\infty a_n x^n$ converges absolutely at a point
+  $x_0$, then it converges uniformly on the closed interval $[-c, c]$, where $c
+  = \abs{x_0}$.
+\end{theorem}
+
+\begin{lemma}[Abel's Lemma]
+  Let $b_n$ satisfy $b_1 \ge b_2 \ge b_3 \ge \cdots \ge 0$, and let
+  $\sum_{n=1}^\infty a_n$ be a series for which the partial sums are bounded. In
+  other words, assume there exists $A > 0$ such that
+  \[
+    \abs{a_1 + a_2 + \cdots + a_n} \le A
+  \]
+  for all $n \in \N$. Then, for all $n \in \N$,
+  \[
+    \abs{a_1 b_1 + a_2 b_2 + a_3 b_3 + \cdots + a_n b_n} \le A b_1.
+  \]
+\end{lemma}
+
+\begin{theorem}[Abel's Theorem]
+  Let $g(x) = \sum_{n=0}^\infty a_n x^n$ be a power series that converges at the
+  point $x = R > 0$. Then the series converges uniformly on the interval $[0,
+  R]$. A similar result holds if the series converges at $x = -R$.
+\end{theorem}
+
+\begin{theorem}
+  If a power series converges pointwise on the set $A \subseteq \R$, then it
+  converges uniformly on any compact set $K \subseteq A$.
+\end{theorem}
+
 \end{document}
