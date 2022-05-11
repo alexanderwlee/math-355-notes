@@ -1,6 +1,7 @@
 \documentclass{amsart}
 
 \usepackage{enumitem}
+\usepackage{mathtools}
 \usepackage{hyperref}
 
 \newtheorem*{theorem}{Theorem}
@@ -11,10 +12,17 @@
 \theoremstyle{definition}
 \newtheorem*{definition}{Definition}
 
+\DeclarePairedDelimiter\abs{\lvert}{\rvert} % absolute value
+% Swap the definition of \abs*, so that \abs
+% resizes the size of the bars, and the starred version does not.
+\makeatletter
+\let\oldabs\abs%
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\makeatother
+
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
-\newcommand{\abs}[1]{|#1|}
 \newcommand{\st}{\mathrel{:}}
 
 \title{MATH 355: Notes}
@@ -435,6 +443,14 @@ Series}
   values $\sum_{n=1}^\infty \abs{a_n}$ does not converge, then we say that the
   original series $\sum_{n=1}^\infty a_n$ \emph{converges conditionally}.
 \end{definition}
+
+\begin{theorem}[Ratio Test]
+  Given a series $\sum_{n=1}^\infty a_n$ with $a_n \neq 0$, if $(a_n)$ satisfies
+  \[
+    \lim \abs{\frac{a_{n+1}}{a_n}} = r < 1,
+  \]
+  then the series converges absolutely.
+\end{theorem}
 
 \section*{3 Basic Topology of $\R$}
 
