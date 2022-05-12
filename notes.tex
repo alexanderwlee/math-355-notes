@@ -912,4 +912,27 @@ Series}
   converges uniformly on any compact set $K \subseteq A$.
 \end{theorem}
 
+\begin{theorem}
+  If $\sum_{n=0}^\infty a_n x^n$ converges for all $x \in (-R, R)$, then the
+  differentiated series $\sum_{n=1}^\infty n a_n x^{n-1}$ converges at each $x
+  \in (-R, R)$ as well. Consequently, the convergence is uniform on compact sets
+  contained in $(-R, R)$.
+\end{theorem}
+
+\begin{theorem}
+  Assume
+  \[
+    f(x) = \sum_{n=0}^\infty a_n x^n
+  \]
+  converges on an interval $A \subseteq \R$. The function $f$ is continuous on
+  $A$ and differentiable on any open interval $(-R, R) \subseteq A$. The
+  derivative is given by
+  \[
+    f'(x) = \sum_{n=1}^\infty n a_n x^{n-1}.
+  \]
+  Moreover, $f$ is infinitely differentiable on $(-R, R)$, and the successive
+  derivatives can be obtained via term-by-term differentiable of the appropriate
+  series.
+\end{theorem}
+
 \end{document}
